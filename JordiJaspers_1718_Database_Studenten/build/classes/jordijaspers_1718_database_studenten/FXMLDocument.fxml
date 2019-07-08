@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jordijaspers_1718_database_studenten.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="879.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Bachelorproeven">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="840.0" prefWidth="1023.0">
+                     <children>
+                        <TextField fx:id="TE_titel" layoutX="13.0" layoutY="38.0" prefHeight="25.0" prefWidth="130.0" />
+                        <TextArea fx:id="TE_beschrijving" layoutX="14.0" layoutY="113.0" prefHeight="200.0" prefWidth="342.0" text="Geef een beschrijving van de bachelorproef." />
+                        <Button fx:id="B_opslaanBP" layoutX="16.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Voeg toe" />
+                        <TableView fx:id="bpTable" layoutX="13.0" layoutY="369.0" prefHeight="467.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn fx:id="column_Titel" prefWidth="252.00002002716064" text="Titel" />
+                              <TableColumn fx:id="column_Beschrijving" prefWidth="794.0000305175781" text="Beschrijving" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="16.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titel:" />
+                        <Text layoutX="16.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beschrijving:" />
+                        <Button fx:id="B_deleteBP" layoutX="185.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Verwijder" />
+                        <ImageView fitHeight="149.0" fitWidth="396.0" layoutX="530.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/logos-UHasselt-KULeuven.PNG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="B_ReadMe" layoutX="588.0" layoutY="258.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="279.0" text="Help &amp; ReadMe" />
+                        <Text layoutX="588.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="274.00006103515625" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Studenten">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="TE_naam" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="130.0" />
+                        <Button fx:id="B_opslaanStudent" layoutX="339.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Voeg toe" />
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naam:" />
+                        <Text layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Keuze van de bachelorproef:" />
+                        <ChoiceBox fx:id="TE_keuze" layoutX="13.0" layoutY="98.0" prefHeight="21.0" prefWidth="289.0" />
+                        <TableView fx:id="bpTable1" layoutX="13.0" layoutY="585.0" prefHeight="251.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn fx:id="column_Titel1" prefWidth="252.00002002716064" text="Title" />
+                              <TableColumn fx:id="column_Beschrijving1" prefWidth="794.0000305175781" text="Beschrijving" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="TE_groep" layoutX="179.0" layoutY="35.0" prefHeight="25.0" prefWidth="124.0" />
+                        <Text layoutX="179.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Groep:" />
+                        <TableView fx:id="studentTable" layoutX="13.0" layoutY="324.0" prefHeight="261.0" prefWidth="1048.0">
+                          <columns>
+                            <TableColumn fx:id="column_Student" prefWidth="221.33334827423096" text="Student" />
+                            <TableColumn fx:id="column_StudentGroep" minWidth="0.0" prefWidth="74.66661071777344" text="Groep" />
+                              <TableColumn fx:id="column_StudentBachelorproef" minWidth="0.0" prefWidth="752.6666564941406" text="Bachelorproef" />
+                          </columns>
+                        </TableView>
+                        <ImageView fitHeight="179.0" fitWidth="406.0" layoutX="537.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/logos-UHasselt-KULeuven.PNG" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Samenvatting">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="samenvattingTable" layoutY="-1.0" prefHeight="854.0" prefWidth="1074.0">
+                           <columns>
+                              <TableColumn fx:id="column_SStudent1" prefWidth="148.66663110256195" text="Student 1:" />
+                              <TableColumn fx:id="column_SStudent2" prefWidth="146.0000457763672" text="Student 2:" />
+                              <TableColumn fx:id="column_SStudent3" prefWidth="148.66663110256195" text="Student 3:" />
+                              <TableColumn fx:id="column_SGroep" prefWidth="86.66665649414062" text="Groep:" />
+                              <TableColumn fx:id="column_SBP" prefWidth="542.0" text="BachelorProef" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

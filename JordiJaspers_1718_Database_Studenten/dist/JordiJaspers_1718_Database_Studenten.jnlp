@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JordiJaspers_1718_Database_Studenten.jnlp">
+  <information>
+    <title>JordiJaspers_1718_Database_Studenten</title>
+    <vendor>Jordi Jaspers</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JordiJaspers_1718_Database_Studenten.jar" size="24369" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.41-bin.jar" size="992808" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JordiJaspers_1718_Database_Studenten" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="jordijaspers_1718_database_studenten.JordiJaspers_1718_Database_Studenten"  name="JordiJaspers_1718_Database_Studenten" />
+  <update check="always"/>
+</jnlp>
